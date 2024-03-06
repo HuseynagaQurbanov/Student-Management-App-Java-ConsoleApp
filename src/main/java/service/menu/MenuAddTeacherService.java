@@ -1,6 +1,8 @@
 package service.menu;
 
-public class MenuAddTeacherService extends MenuService {
+import service.menu.inter.IMenuAddTeacherService;
+
+public class MenuAddTeacherService implements IMenuAddTeacherService {
 
     @Override
     public void precess() {

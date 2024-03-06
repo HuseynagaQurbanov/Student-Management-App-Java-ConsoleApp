@@ -1,12 +1,21 @@
 package util;
 
+import java.util.Scanner;
+
 public class MenuUtil {
-    public void show() {
-        MenuEnum[] menus = MenuEnum.values();
+    public static MenuEnum showMenu() {
+        MenuEnum.showAllMenu();
         
-        for (int i = 0; i < menus.length; i++) {
-            System.out.println((i+1) + "." + menus[i]);
-        }
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please select menu.");
+        int selectedMenu = sc.nextInt();
+        
+        return MenuEnum.find(selectedMenu);
     }
+    
+    public static void processMenu(MenuEnum menu) {
+        menu.process();
+    }
+    
     
 }
