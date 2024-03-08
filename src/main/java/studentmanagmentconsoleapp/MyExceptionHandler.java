@@ -1,4 +1,4 @@
-package main;
+package studentmanagmentconsoleapp;
 
 public class MyExceptionHandler implements Thread.UncaughtExceptionHandler {
 

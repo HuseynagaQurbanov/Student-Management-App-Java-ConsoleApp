@@ -1,12 +1,18 @@
 package service.menu;
 
-import service.menu.inter.IMenuShowAllStudentService;
+import bean.Config;
+import bean.Student;
+import service.inter.menu.IMenuShowAllStudentService;
 
 public class MenuShowAllStudentService implements IMenuShowAllStudentService {
 
     @Override
-    public void precess() {
-        System.out.println("Show All Students");
+    public void processLogic() {
+        System.out.println("==================== All Students ====================");
+        Student[] allStudent = Config.instance().getStudents();
+        for (int i = 0; i < allStudent.length; i++) {
+            System.out.println(allStudent[i]);
+        }
     }
-    
+
 }
